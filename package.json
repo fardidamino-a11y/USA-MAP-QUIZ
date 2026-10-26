@@ -1,0 +1,22 @@
+{
+  "name": "can-you-master-all-50-states",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser geography game: Can You Master All 50 States?",
+  "scripts": {
+    "build:map": "node scripts/build-map.mjs",
+    "build:flags": "node scripts/build-flags.mjs",
+    "build:data": "npm run build:map && npm run build:flags",
+    "build": "node scripts/bundle.mjs",
+    "verify": "node scripts/verify-data.mjs",
+    "start": "npx --yes serve -l 8080 ."
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "polylabel": "^1.1.0",
+    "svgo": "^3.3.2",
+    "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.1",
+    "us-state-flags": "1.0.7"
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Can You Master All 50 States?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A U.S. geography game: name all 50 states, spot highlighted states, capitals, flags and physical geography. Includes a Play Along mode for video.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Big+Shoulders+Display:wght@700;800;900&family=Overpass:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar" id="topbar">
+    <button class="brand" type="button" id="brand-home" aria-label="Go to the home screen">
+      <span class="brand-mark" aria-hidden="true">50</span>
+      <span>MASTER ALL 50</span>
+    </button>
+    <div class="topbar-actions">
+      <button class="icon-btn" type="button" id="btn-sound" aria-pressed="true" aria-label="Sound effects" title="Sound on/off">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+      </button>
+      <button class="icon-btn" type="button" id="btn-present" aria-pressed="false" aria-label="Presentation mode (full screen, larger text)" title="Presentation mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="sr-only" id="live" aria-live="assertive"></div>
+
+<!-- Data (kept separate from game code so new categories are easy to add) -->
+<script src="js/data/map-data.js"></script>
+<script src="js/data/states.js"></script>
+<script src="js/data/physical.js"></script>
+<script src="js/data/flags-data.js"></script>
+<!-- Game code -->
+<script src="js/storage.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/map.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
